@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         // moving the dog forward on user input
         // playerRb.AddRelativeForce(Vector3.forward * runSpeed * verticalInput);
-        if (verticalInput >= 0) {
+        if (verticalInput >= -1) {
             transform.Translate(Vector3.forward * runSpeed * Time.deltaTime * verticalInput);
         }
         
@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.CompareTag("Orb")) {
+            Debug.Log("Orb Reached");
         }
     }
 }
