@@ -20,6 +20,9 @@ public class TitleButtonManager : MonoBehaviour
     }
 
     public void StartGame() {
+        
         SceneManager.LoadScene("Scene0");
     }
+
+
 }
