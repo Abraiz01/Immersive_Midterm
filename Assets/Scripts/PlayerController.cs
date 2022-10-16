@@ -20,12 +20,17 @@ public class PlayerController : MonoBehaviour
     public bool gameOver = false;
     private Animator playerAnim;
 
+    private GameManager gameManagerScript;
+    public bool touchingOrb = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
+        gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -49,11 +54,27 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && touchingOrb) {
+            gameManagerScript.SetScene("Scene2");
+            // Debug.Log("E pressed on orb");
+        }
+
     }
 
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Orb")) {
-            Debug.Log("Orb Reached");
+            // Debug.Log(gameManagerScript.isGameActive);
+            touchingOrb = true;
+            // Debug.Log(touchingOrb);
+        }
+    }
+
+        private void OnCollisionExit(Collision other) {
+        if (other.gameObject.CompareTag("Orb")) {
+            // Debug.Log(gameManagerScript.isGameActive);
+            touchingOrb = false;
+            // Debug.Log(touchingOrb);
         }
     }
 }
