@@ -26,7 +26,7 @@ public class OtherDogAnimator : MonoBehaviour
             playerAnim.SetFloat("Speed_f", 0.9f);
         }
 
-        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene6")) {
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene6") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene7")) {
             if (time%10 > 0 && time%10 < 7) {
                 Debug.Log("bark");
                 playerAnim.SetBool("Bark_b", true);
@@ -36,6 +36,11 @@ public class OtherDogAnimator : MonoBehaviour
                 Debug.Log("no bark");
                 playerAnim.SetBool("Bark_b", false);
             }
+        }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene8")) {
+            playerAnim.SetBool("Bark_b", false);
+            playerAnim.SetBool("Sit_b", true);
         }
     }
 }

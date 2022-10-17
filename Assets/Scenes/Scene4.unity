@@ -233,27 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e84082b89ec9647bad83a1ef5abac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &98725595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98725593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e731b09a802c0946b4895d68411a188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 20
-  turnspeed: 60
-  horizontalInput: 0
-  verticalInput: 0
-  jumpForce: 160
-  gravityModifier: 2
-  isOnGround: 1
-  gameOver: 0
-  touchingOrb: 0
 --- !u!65 &98725596
 BoxCollider:
   m_ObjectHideFlags: 0

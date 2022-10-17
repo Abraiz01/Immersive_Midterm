@@ -52,7 +52,7 @@ public class PlayerAnimator : MonoBehaviour
             playerAnim.SetBool("Sit_b", true);
         }
 
-        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene2")) {
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene2") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene8")) {
             playerAnim.SetBool("Bark_b", false);
         }
 
@@ -61,7 +61,7 @@ public class PlayerAnimator : MonoBehaviour
             transform.Rotate(80.0f * Time.deltaTime, 100.0f * Time.deltaTime, 120.0f * Time.deltaTime);
         }
 
-        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene6")) {
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene6") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene7")) {
             playerAnim.SetBool("Bark_b", false);
             if (time%10 > 0 && time%10 < 5) {
                 Debug.Log("bark");

@@ -1105,27 +1105,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 105536, guid: 957efc93c4488964582c89c0bf939bf0, type: 3}
   m_PrefabInstance: {fileID: 2008648629}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2008648631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008648630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e731b09a802c0946b4895d68411a188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 20
-  turnspeed: 60
-  horizontalInput: 0
-  verticalInput: 0
-  jumpForce: 160
-  gravityModifier: 2
-  isOnGround: 1
-  gameOver: 0
-  touchingOrb: 0
 --- !u!114 &2008648632
 MonoBehaviour:
   m_ObjectHideFlags: 0
