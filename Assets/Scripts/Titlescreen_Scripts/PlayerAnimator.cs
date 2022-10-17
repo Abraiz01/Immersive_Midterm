@@ -60,5 +60,18 @@ public class PlayerAnimator : MonoBehaviour
             playerAnim.SetBool("Bark_b", true);
             transform.Rotate(80.0f * Time.deltaTime, 100.0f * Time.deltaTime, 120.0f * Time.deltaTime);
         }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene6")) {
+            playerAnim.SetBool("Bark_b", false);
+            if (time%10 > 0 && time%10 < 5) {
+                Debug.Log("bark");
+                playerAnim.SetBool("Bark_b", true);
+            }
+
+            else if (time%10 > 5 && time%10 < 10) {
+                Debug.Log("no bark");
+                playerAnim.SetBool("Bark_b", false);
+            }
+        }
     }
 }
