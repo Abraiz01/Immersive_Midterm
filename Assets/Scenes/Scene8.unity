@@ -2971,6 +2971,7 @@ MonoBehaviour:
   isOnGround: 1
   gameOver: 0
   touchingOrb: 0
+  interactText: {fileID: 1254484141}
 --- !u!65 &1095067039
 BoxCollider:
   m_ObjectHideFlags: 0

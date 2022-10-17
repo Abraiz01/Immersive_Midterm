@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gameManagerScript;
     public bool touchingOrb = false;
+    public TextMeshProUGUI interactText;
 
 
     // Start is called before the first frame update
@@ -46,7 +47,6 @@ public class PlayerController : MonoBehaviour
         playerAnim.SetFloat("Speed_f", Math.Abs(verticalInput));
 
         // moving the dog forward on user input
-        // playerRb.AddRelativeForce(Vector3.forward * runSpeed * verticalInput);
         if (verticalInput >= -1) {
             transform.Translate(Vector3.forward * runSpeed * Time.deltaTime * verticalInput);
         }
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Orb")) {
             Debug.Log("Press E to interact");
+            interactText.gameObject.SetActive(true);
             touchingOrb = true;
             // Debug.Log(touchingOrb);
         }
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
         private void OnCollisionExit(Collision other) {
         if (other.gameObject.CompareTag("Orb")) {
             // Debug.Log(gameManagerScript.isGameActive);
+            interactText.gameObject.SetActive(false);
             touchingOrb = false;
             // Debug.Log(touchingOrb);
         }
