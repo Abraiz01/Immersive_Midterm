@@ -22,15 +22,43 @@ public class PlayerAnimator : MonoBehaviour
         // Debug.Log(time%4);
 
         if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("TitleScene")) {
-            if (time%10 > 0 && time%10 < 5) {
+            playerAnim.SetBool("Bark_b", false);
+
+            if (time%10 > 0 && time%10 < 7) {
                 Debug.Log("eat");
                 playerAnim.SetBool("Eat_b", true);
             }
 
-            else if (time%10 > 5 && time%10 < 10) {
+            else if (time%10 > 7 && time%10 < 10) {
                 Debug.Log("no eat");
                 playerAnim.SetBool("Eat_b", false);
             }
+        }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene0")) {
+            if (time%10 > 0 && time%10 < 7) {
+                Debug.Log("bark");
+                playerAnim.SetBool("Bark_b", true);
+            }
+
+            else if (time%10 > 7 && time%10 < 10) {
+                Debug.Log("no bark");
+                playerAnim.SetBool("Bark_b", false);
+            }
+        }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene1")) {
+            playerAnim.SetBool("Bark_b", false);
+            playerAnim.SetBool("Sit_b", true);
+        }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene2")) {
+            playerAnim.SetBool("Bark_b", false);
+        }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene3")) {
+            playerAnim.SetBool("Bark_b", true);
+            transform.Rotate(80.0f * Time.deltaTime, 100.0f * Time.deltaTime, 120.0f * Time.deltaTime);
         }
     }
 }

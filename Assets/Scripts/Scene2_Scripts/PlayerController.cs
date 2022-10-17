@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.E) && touchingOrb) {
-            gameManagerScript.SetScene("Scene2");
+            gameManagerScript.SetScene("Scene3");
             // Debug.Log("E pressed on orb");
         }
 
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Orb")) {
-            // Debug.Log(gameManagerScript.isGameActive);
+            Debug.Log("Press E to interact");
             touchingOrb = true;
             // Debug.Log(touchingOrb);
         }
