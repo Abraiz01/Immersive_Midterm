@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class TitleButtonManager : MonoBehaviour
 {
+    public TextMeshProUGUI aboutText;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class TitleButtonManager : MonoBehaviour
     public void StartGame() {
         
         SceneManager.LoadScene("Scene0");
+    }
+
+    public void ShowAboutText() {
+        aboutText.gameObject.SetActive(true);
     }
 
 

@@ -74,5 +74,13 @@ public class PlayerAnimator : MonoBehaviour
                 playerAnim.SetBool("Bark_b", false);
             }
         }
+
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene10")) {
+            playerAnim.SetBool("Bark_b", true);
+            if (time%20 > 10 && time%20 < 20) {
+                playerAnim.SetBool("Bark_b", false);
+                playerAnim.SetBool("Sit_b", true);
+            }
+        }
     }
 }
