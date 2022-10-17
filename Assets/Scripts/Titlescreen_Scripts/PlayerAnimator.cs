@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class PlayerAnimator : MonoBehaviour
 {
     private Animator playerAnim;
@@ -56,7 +57,7 @@ public class PlayerAnimator : MonoBehaviour
             playerAnim.SetBool("Bark_b", false);
         }
 
-        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene3")) {
+        if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene3") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene9")) {
             playerAnim.SetBool("Bark_b", true);
             transform.Rotate(80.0f * Time.deltaTime, 100.0f * Time.deltaTime, 120.0f * Time.deltaTime);
         }

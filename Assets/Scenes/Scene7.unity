@@ -661,7 +661,7 @@ MonoBehaviour:
 
 
     Other Luke: Glowy, strange..
-    Yes! There''s this cabin here in the park that I''ve heard strange things about.
+    Yes! There''s this room here in the park and I''ve seen something glow inside.
 
 
     Luke:
@@ -669,7 +669,7 @@ MonoBehaviour:
 
 
     Other
-    Luke: Bu-bye Luke!!'
+    Luke: Bu-bye!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

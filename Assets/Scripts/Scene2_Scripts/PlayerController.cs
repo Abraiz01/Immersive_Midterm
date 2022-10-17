@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -55,8 +58,13 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && touchingOrb) {
+        if (Input.GetKeyDown(KeyCode.E) && touchingOrb && SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene2")) {
             gameManagerScript.SetScene("Scene3");
+            // Debug.Log("E pressed on orb");
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && touchingOrb && SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Scene8")) {
+            gameManagerScript.SetScene("Scene9");
             // Debug.Log("E pressed on orb");
         }
 
