@@ -1,5 +1,5 @@
 # A Doggy Adventure
-Midterm project for the class Immersive Experiences
+A 3D comic experience made on Unity
 
 
 
