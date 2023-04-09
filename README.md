@@ -1,5 +1,6 @@
 # A Doggy Adventure
-A 3D comic experience made on Unity
+To play the game on WebGL: [A Doggy Adventure](https://play.unity.com/mg/other/ie-midterm)
+A 3D comic experience made on Unity portraying the story of a dog traveling through different dimensions.
 
 
 
